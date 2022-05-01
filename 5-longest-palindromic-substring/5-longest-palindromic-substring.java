@@ -2,7 +2,6 @@ class Solution {
     String longestPalindrome = "";
     public String longestPalindrome(String s) {
        
-        int mid = s.length()/2;
         int start = 0 ; int end = s.length()-1;
         for(int i=0; i< s.length(); i++){
             isPalindrome(i, i, s);
