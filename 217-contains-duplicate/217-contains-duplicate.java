@@ -3,11 +3,9 @@ import java.util.*;
 
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-        Hashtable<Integer, Integer> ht = new Hashtable<Integer, Integer>();
-        for(int i=0; i<nums.length; i++){
-            if(!ht.containsKey(nums[i]))
-                ht.put(nums[i], nums[i]);
-            else
+        Arrays.sort(nums);
+        for(int i=0; i<nums.length-1; i++){
+            if(nums[i]==nums[i+1])
                 return true;
         }
         return false;
