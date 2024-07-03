@@ -1,6 +1,5 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        set_main = set()
         target = 0
         res_ = []
         nums.sort() #O(nlogn)
@@ -9,7 +8,6 @@ class Solution:
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
                 
-            set_ = set()
             target_i = target - nums[i]
             start = i+1
             end= len(nums)-1
